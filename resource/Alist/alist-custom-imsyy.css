@@ -23,6 +23,12 @@ body.hope-ui-dark {
     --custom-btnBackgroundColor: #3a3f42;
     background-image: url("https://cdn.jsdelivr.net/gh/MadisonWirtanen/image-hosting-web-site@main/xxxStarry_Night_Over_the_Rhone.webp");
 }
+body.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css {
+    --custom-background-color: rgba(255, 255, 255, 0.5) !important;
+}
+body.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-iigjoxS-css {
+    --custom-background-color:rgb(0 0 0 / 50%) !important;
+}
 body #root .header {
     top: 0;
     z-index: 999;
