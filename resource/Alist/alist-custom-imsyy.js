@@ -84,7 +84,7 @@ const customLogo = (el) => {
       // 在原有元素的父元素内部前面插入新的父元素
       parentElement.insertBefore(newParentElement, parentElement.firstChild);
       // 设置新元素的内容
-      const newLogo = `<a href="/" class="left-all"><span class="name">Imsyy Drive</span></a>`;
+      const newLogo = `<a href="/" class="left-all"><span class="name">Alist of ykwang</span></a>`;
       // 使用innerHTML设置新元素的内容
       newParentElement.innerHTML = newLogo;
     }
