@@ -100,6 +100,19 @@ body {
         }
       }
     }
+    // 文件列表白天透明
+    .obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css {
+      background-color: var(--custom-backgroundColor);
+    }
+    // 文件列表夜间透明
+    .obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-iigjoxS-css {
+      background-color: var(--custom-backgroundColor);
+    }
+    // Markdown白天透明
+    .hope-c-PJLV.hope-c-PJLV-ikSuVsl-css {
+      background-color: var(--custom-backgroundColor);
+    }
+    // Markdown夜间透明
     .hope-c-PJLV.hope-c-PJLV-ikSuVsl-css {
       background-color: var(--custom-backgroundColor);
     }
@@ -166,26 +179,7 @@ body {
 }
 
 // 侧边栏
-.left-toolbar-box {
-  right: 0 !important;
-  min-height: 6rem;
-  width: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  &:hover {
-    .left-toolbar,
-    svg:first-of-type {
-      transform: translateX(0px) !important;
-    }
-  }
-  .left-toolbar,
-  svg:first-of-type {
-    transform: translateX(70px) !important;
-    transition: transform 0.3s;
-    max-width: 40px;
-  }
-}
+
 
 // 禁止选中
 * {

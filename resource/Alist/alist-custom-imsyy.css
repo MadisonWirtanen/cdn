@@ -81,6 +81,15 @@ body #root .body.hope-stack .markdown-body {
 body #root .body.hope-stack .markdown-body blockquote > :last-child {
     font-size: 14px;
 }
+body #root .obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css {
+    background-color: var(--custom-backgroundColor);
+}
+body #root .obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-iigjoxS-css {
+    background-color: var(--custom-backgroundColor);
+}
+body #root .hope-c-PJLV.hope-c-PJLV-ikSuVsl-css {
+    background-color: var(--custom-backgroundColor);
+}
 body #root .hope-c-PJLV.hope-c-PJLV-ikSuVsl-css {
     background-color: var(--custom-backgroundColor);
 }
@@ -134,22 +143,6 @@ body .hope-drawer__overlay {
 .fa-solid.fa-message {
     margin: 0 6px 0 0;
     transform: translateY(1px);
-}
-.left-toolbar-box {
-    right: 0 !important;
-    min-height: 6rem;
-    width: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-.left-toolbar-box:hover .left-toolbar, .left-toolbar-box:hover svg:first-of-type {
-    transform: translateX(0px) !important;
-}
-.left-toolbar-box .left-toolbar, .left-toolbar-box svg:first-of-type {
-    transform: translateX(70px) !important;
-    transition: transform 0.3s;
-    max-width: 40px;
 }
 * {
     user-select: none;
