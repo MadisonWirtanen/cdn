@@ -92,7 +92,6 @@ body {
         // MarkDown
         .markdown-body {
           font-family: HarmonyOS_Regular, sans-serif !important;
-          background-color: var(--custom-backgroundColor)!important;
           blockquote {
             & > :last-child {
               font-size: 14px;
@@ -100,6 +99,9 @@ body {
           }
         }
       }
+    }
+    .hope-c-PJLV.hope-c-PJLV-ikSuVsl-css {
+      background-color: var(--custom-backgroundColor);
     }
     // 页脚
     .custom-footer {

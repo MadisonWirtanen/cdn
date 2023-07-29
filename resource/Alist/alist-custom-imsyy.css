@@ -77,10 +77,12 @@ body #root .body.hope-stack .obj-box {
 }
 body #root .body.hope-stack .markdown-body {
     font-family: HarmonyOS_Regular, sans-serif !important;
-    background-color: var(--custom-backgroundColor) !important;
 }
 body #root .body.hope-stack .markdown-body blockquote > :last-child {
     font-size: 14px;
+}
+body #root .hope-c-PJLV.hope-c-PJLV-ikSuVsl-css {
+    background-color: var(--custom-backgroundColor);
 }
 body #root .custom-footer {
     display: flex;
