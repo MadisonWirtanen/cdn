@@ -68,9 +68,6 @@ body #root .header .header-right .hope-stack.hope-c-PJLV .hope-icon {
 body #root .header .header-right .hope-stack.hope-c-PJLV .hope-kbd {
     font-size: 0.6em;
 }
-body #root .body.hope-stack {
-    background-color: var(--custom-backgroundColor);
-}
 body #root .body.hope-stack nav {
     width: 100%;
 }
@@ -80,6 +77,7 @@ body #root .body.hope-stack .obj-box {
 }
 body #root .body.hope-stack .markdown-body {
     font-family: HarmonyOS_Regular, sans-serif !important;
+    background-color: var(--custom-backgroundColor) !important;
 }
 body #root .body.hope-stack .markdown-body blockquote > :last-child {
     font-size: 14px;

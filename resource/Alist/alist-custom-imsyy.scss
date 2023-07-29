@@ -80,7 +80,6 @@ body {
     // 内容
     .body {
       &.hope-stack {
-        background-color: var(--custom-backgroundColor);
         // 面包屑导航
         nav {
           width: 100%;
@@ -93,6 +92,7 @@ body {
         // MarkDown
         .markdown-body {
           font-family: HarmonyOS_Regular, sans-serif !important;
+          background-color: var(--custom-backgroundColor)!important;
           blockquote {
             & > :last-child {
               font-size: 14px;
