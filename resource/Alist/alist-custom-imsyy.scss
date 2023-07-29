@@ -113,7 +113,7 @@ body {
       background-color: var(--custom-backgroundColor);
     }
     // Markdown夜间透明
-    .hope-c-PJLV.hope-c-PJLV-ikSuVsl-css {
+    .hope-c-PJLV.hope-c-PJLV-iiuDLME-css {
       background-color: var(--custom-backgroundColor);
     }
     // 页脚
@@ -179,7 +179,27 @@ body {
 }
 
 // 侧边栏
-
+.left-toolbar-box {
+  background-color: var(--custom-backgroundColor);
+  right: 0 !important;
+  min-height: 6rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  &:hover {
+    .left-toolbar,
+    svg:first-of-type {
+      transform: translateX(0px) !important;
+    }
+  }
+  .left-toolbar,
+  svg:first-of-type {
+    transform: translateX(70px) !important;
+    transition: transform 0.3s;
+    max-width: 40px;
+  }
+}
 
 // 禁止选中
 * {
