@@ -145,7 +145,6 @@ body .hope-drawer__overlay {
     transform: translateY(1px);
 }
 .left-toolbar-box {
-    background-color: var(--custom-backgroundColor);
     right: 0 !important;
     min-height: 6rem;
     width: 6rem;
