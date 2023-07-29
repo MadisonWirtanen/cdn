@@ -9,7 +9,7 @@ body {
   &.hope-ui-light {
     // 自定义颜色
     --custom-fontColor: #11181c;
-    --custom-backgroundColor: rgba(255, 255, 255, 0.5);
+    --custom-backgroundColor: rgb(255 255 255 / 50%);
     --custom-backgroundColor-grey: #ffffff;
     --custom-backgroundColor-border: #eceff2;
     --custom-backgroundColor-transl: #f4f4f4bf;
@@ -80,6 +80,7 @@ body {
     // 内容
     .body {
       &.hope-stack {
+        background-color: var(--custom-backgroundColor);
         // 面包屑导航
         nav {
           width: 100%;
@@ -92,7 +93,6 @@ body {
         // MarkDown
         .markdown-body {
           font-family: HarmonyOS_Regular, sans-serif !important;
-          background-color: var(--custom-backgroundColor);
           blockquote {
             & > :last-child {
               font-size: 14px;
