@@ -23,6 +23,12 @@ body.hope-ui-dark {
     --custom-btnBackgroundColor: #3a3f42;
     background-image: url("https://cdn.jsdelivr.net/gh/MadisonWirtanen/image-hosting-web-site@main/xxxxVan_Gogh_-_Starry_Night_-_Google_Art_Project.webp");
 }
+body.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+body.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-iigjoxS-css {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
 body #root .header {
     top: 0;
     z-index: 999;
@@ -73,11 +79,6 @@ body #root .body.hope-stack nav {
 }
 body #root .body.hope-stack .obj-box-light {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5) !important;
-}
-body #root .body.hope-stack .obj-box-dark {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5) !important;
 }
 body #root .body.hope-stack .markdown-body {
     font-family: HarmonyOS_Regular, sans-serif !important;

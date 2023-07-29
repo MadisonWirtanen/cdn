@@ -26,6 +26,12 @@ body {
     --custom-btnBackgroundColor: #3a3f42;
     background-image: url("https://cdn.jsdelivr.net/gh/MadisonWirtanen/image-hosting-web-site@main/xxxxVan_Gogh_-_Starry_Night_-_Google_Art_Project.webp");
   }
+  &.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css {
+    background-color: rgba(255, 255, 255, 0.5)!important;
+  }
+  &.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-iigjoxS-css {
+    background-color:rgba(0, 0, 0, 0.5)!important;
+  }
   #root {
     // 页头
     .header {
@@ -87,11 +93,6 @@ body {
         // 文件列表
         .obj-box-light {
           width: 100%;
-          background-color: rgba(255, 255, 255, 0.5)!important;
-        }
-        .obj-box-dark {
-          width: 100%;
-          background-color: rgba(0, 0, 0, 0.5)!important;
         }
         // MarkDown
         .markdown-body {
