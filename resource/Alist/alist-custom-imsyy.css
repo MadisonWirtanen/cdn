@@ -148,15 +148,17 @@ body .hope-drawer__overlay {
     background-color: var(--custom-backgroundColor);
     right: 0 !important;
     min-height: 6rem;
-    width: 4rem;
+    width: 10rem;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 .left-toolbar-box:hover .left-toolbar, .left-toolbar-box:hover svg:first-of-type {
+    background-color: var(--custom-backgroundColor) !important;
     transform: translateX(0px) !important;
 }
 .left-toolbar-box .left-toolbar, .left-toolbar-box svg:first-of-type {
+    background-color: var(--custom-backgroundColor) !important;
     transform: translateX(70px) !important;
     transition: transform 0.3s;
     max-width: 40px;

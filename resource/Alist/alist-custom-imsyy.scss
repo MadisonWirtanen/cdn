@@ -182,21 +182,21 @@ body {
 .left-toolbar-box {
   background-color: var(--custom-backgroundColor);
   right: 0 !important;
-  min-height: 8rem;
-  width: 8rem;
+  min-height: 6rem;
+  width: 10rem;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   &:hover {
     .left-toolbar,
     svg:first-of-type {
-      background-color: var(--custom-backgroundColor);
+      background-color: var(--custom-backgroundColor) !important;
       transform: translateX(0px) !important;
     }
   }
   .left-toolbar,
   svg:first-of-type {
-    background-color: var(--custom-backgroundColor);
+    background-color: var(--custom-backgroundColor) !important;
     transform: translateX(70px) !important;
     transition: transform 0.3s;
     max-width: 40px;
