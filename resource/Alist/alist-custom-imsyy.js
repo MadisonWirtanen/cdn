@@ -61,7 +61,7 @@ const observeElementChanges = (selector, callbacks, isStop = true) => {
 const customFooter = (el) => {
   try {
     if (el !== null) {
-      el.innerHTML = `<div class="custom-footer"><div class="icon"><a href="https://github.com/MadisonWirtanen"><i class="fa-brands fa-github"></i> </a><a href="https://www.ykwang.top"><i class="fa-solid fa-house"></i> </a><a href="mailto:email@ykwang.top"><i class="fa-solid fa-envelope"></i></a></div><div class="text"><div class="num">Powered by <a href="https://alist.nn.ci/zh/" target="_blank">Alist</a> | Themed by <a href="https://imsyy.top/" target="_blank">無名</a></i></span></div><div class="power">Copyright © 2020 - ${new Date().getFullYear()} <a href="https://ykwang.top/" target="_blank">ykwang</a></div></div></div>`;
+      el.innerHTML = `<div class="custom-footer"><div class="icon"><a href="https://github.com/MadisonWirtanen"><i class="fa-brands fa-github"></i> </a><a href="https://www.ykwang.top"><i class="fa-solid fa-house"></i> </a><a href="mailto:email@ykwang.top"><i class="fa-solid fa-envelope"></i></a></div><div class="text"><div class="num">Themed by <a href="https://imsyy.top/" target="_blank">無名</a> | Powered by <a href="https://alist.nn.ci/zh/" target="_blank">Alist</a></i></span></div><div class="power">Copyright © 2020 - ${new Date().getFullYear()} <a href="https://ykwang.top/" target="_blank">ykwang</a></div></div></div>`;
     }
   } catch (error) {
     console.error("页脚自定义出现问题：" + error);
