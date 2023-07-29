@@ -148,7 +148,7 @@ body .hope-drawer__overlay {
     background-color: var(--custom-backgroundColor);
     right: 0 !important;
     min-height: 6rem;
-    width: 10rem;
+    width: 6rem;
     display: flex;
     justify-content: center;
     align-items: flex-end;
