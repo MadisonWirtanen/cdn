@@ -73,6 +73,7 @@ body #root .body.hope-stack nav {
 }
 body #root .body.hope-stack .obj-box {
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.5)!important;
 }
 body #root .body.hope-stack .markdown-body {
     font-family: HarmonyOS_Regular, sans-serif !important;
