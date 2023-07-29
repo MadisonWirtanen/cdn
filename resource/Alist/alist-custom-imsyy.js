@@ -20,39 +20,6 @@
  * @param {Boolean} isStop - 是否在改变后停止观察
  * @returns {void}
  */
-const observeElementChanges = (selector, callbacks, isStop = true) => {
-  try {
-    const target = document.querySelector("#root");
-    if (!target) {
-      console.error(`未查找到 #root 元素`);
-      return;
-    }
-    const observer = new MutationObserver((mutationsList) => {
-      for (let mutation of mutationsList) {
-        if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
-          const matchedElement = target.querySelector(selector);
-          if (matchedElement) {
-            if (Array.isArray(callbacks)) {
-              callbacks.forEach((callback) => {
-                if (typeof callback === "function") {
-                  callback(matchedElement);
-                }
-              });
-            } else if (typeof callbacks === "function") {
-              callbacks(matchedElement);
-            }
-            // 停止观察
-            if (isStop) observer.disconnect();
-          }
-        }
-      }
-    });
-    const config = { childList: true, subtree: true };
-    observer.observe(target, config);
-  } catch (error) {
-    console.error("在观察元素更改时发生错误：", error);
-  }
-};
 
 /**
  * 页脚自定义
