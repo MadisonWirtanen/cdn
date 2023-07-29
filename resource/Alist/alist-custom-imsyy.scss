@@ -85,9 +85,13 @@ body {
           width: 100%;
         }
         // 文件列表
-        .obj-box {
+        .obj-box-light {
           width: 100%;
           background-color: rgba(255, 255, 255, 0.5)!important;
+        }
+        .obj-box-dark {
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.5)!important;
         }
         // MarkDown
         .markdown-body {

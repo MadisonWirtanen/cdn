@@ -71,9 +71,13 @@ body #root .header .header-right .hope-stack.hope-c-PJLV .hope-kbd {
 body #root .body.hope-stack nav {
     width: 100%;
 }
-body #root .body.hope-stack .obj-box {
+body #root .body.hope-stack .obj-box-light {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5)!important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+body #root .body.hope-stack .obj-box-dark {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5) !important;
 }
 body #root .body.hope-stack .markdown-body {
     font-family: HarmonyOS_Regular, sans-serif !important;
