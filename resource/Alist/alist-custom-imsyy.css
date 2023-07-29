@@ -7,7 +7,7 @@ body {
 }
 body.hope-ui-light {
     --custom-fontColor: #11181c;
-    --custom-backgroundColor: rgb(255 255 255 / 50%);
+    --custom-backgroundColor: rgba(255, 255, 255, 0.5);
     --custom-backgroundColor-grey: #ffffff;
     --custom-backgroundColor-border: #eceff2;
     --custom-backgroundColor-transl: #f4f4f4bf;
@@ -71,7 +71,7 @@ body #root .header .header-right .hope-stack.hope-c-PJLV .hope-kbd {
 body #root .body.hope-stack nav {
     width: 100%;
 }
-body #root .body.hope-stack .obj-box-light {
+body #root .body.hope-stack .obj-box {
     width: 100%;
     background-color: var(--custom-backgroundColor);
 }
