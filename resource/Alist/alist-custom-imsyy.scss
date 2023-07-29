@@ -79,12 +79,6 @@ body {
     }
     // 内容
     .body {
-      &.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css {
-        background-color: rgba(255, 255, 255, 0.5)!important;
-      }
-      &.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-iigjoxS-css {
-        background-color:rgba(0, 0, 0, 0.5)!important;
-      }
       &.hope-stack {
         // 面包屑导航
         nav {
@@ -93,10 +87,12 @@ body {
         // 文件列表
         .obj-box-light {
           width: 100%;
+          background-color: var(--custom-backgroundColor);
         }
         // MarkDown
         .markdown-body {
           font-family: HarmonyOS_Regular, sans-serif !important;
+          background-color: var(--custom-backgroundColor);
           blockquote {
             & > :last-child {
               font-size: 14px;

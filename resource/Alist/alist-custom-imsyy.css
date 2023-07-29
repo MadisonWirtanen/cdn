@@ -68,20 +68,16 @@ body #root .header .header-right .hope-stack.hope-c-PJLV .hope-icon {
 body #root .header .header-right .hope-stack.hope-c-PJLV .hope-kbd {
     font-size: 0.6em;
 }
-body #root .body.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css {
-    background-color: rgba(255, 255, 255, 0.5) !important;
-}
-body #root .body.obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-iigjoxS-css {
-    background-color: rgba(0, 0, 0, 0.5) !important;
-}
 body #root .body.hope-stack nav {
     width: 100%;
 }
 body #root .body.hope-stack .obj-box-light {
     width: 100%;
+    background-color: var(--custom-backgroundColor);
 }
 body #root .body.hope-stack .markdown-body {
     font-family: HarmonyOS_Regular, sans-serif !important;
+    background-color: var(--custom-backgroundColor);
 }
 body #root .body.hope-stack .markdown-body blockquote > :last-child {
     font-size: 14px;
