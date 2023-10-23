@@ -4,7 +4,6 @@ body {
     padding-right: 0 !important;
     font-family: HarmonyOS_Regular, sans-serif !important;
     background-attachment: fixed !important;
-    background-size: cover !important; 
 }
 body.hope-ui-light {
     --custom-fontColor: #11181c;
