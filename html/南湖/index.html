@@ -1,0 +1,804 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+/* meyer reset -- http://meyerweb.com/eric/tools/css/reset/ , v2.0 | 20110126 | License: none (public domain) */
+
+@include-when-export url(https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext);
+
+/* =========== */
+
+/* pt-serif-regular - latin */
+/* pt-serif-italic - latin */
+/* pt-serif-700 - latin */
+/* pt-serif-700italic - latin */
+:root {
+	--active-file-bg-color: #dadada;
+	--active-file-bg-color: rgba(32, 43, 51, 0.63);
+	--active-file-text-color: white;
+	--bg-color: #f3f2ee;
+	--text-color: #1f0909;
+	--control-text-color: #444;
+	--rawblock-edit-panel-bd: #e5e5e5;
+
+	--select-text-bg-color: rgba(32, 43, 51, 0.63);
+  --select-text-font-color: white;
+}
+
+pre {
+	--select-text-bg-color: #36284e;
+	--select-text-font-color: #fff;
+}
+
+html {
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+}
+
+html, body {
+	background-color: #f3f2ee;
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+	color: #1f0909;
+	line-height: 1.5em;
+}
+
+/*#write {
+	overflow-x: auto;
+    max-width: initial;
+	padding-left: calc(50% - 17em);
+    padding-right: calc(50% - 17em);
+}
+
+@media (max-width: 36em) {
+ 	#write {
+ 		padding-left: 1em;
+    	padding-right: 1em;
+ 	}
+}*/
+
+#write {
+	max-width: 40em;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+			max-width: 914px;
+	}
+}
+
+ol li {
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+ul li {
+	list-style-type: disc;
+	list-style-position: outside;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* styles */
+
+/* ====== */
+
+/* headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+}
+h1 {
+	font-size: 1.875em;
+	/*30 / 16*/
+	line-height: 1.6em;
+	/* 48 / 30*/
+	margin-top: 2em;
+}
+h2,
+h3 {
+	font-size: 1.3125em;
+	/*21 / 16*/
+	line-height: 1.15;
+	/*24 / 21*/
+	margin-top: 2.285714em;
+	/*48 / 21*/
+	margin-bottom: 1.15em;
+	/*24 / 21*/
+}
+h3 {
+	font-weight: normal;
+}
+h4 {
+	font-size: 1.125em;
+	/*18 / 16*/
+	margin-top: 2.67em;
+	/*48 / 18*/
+}
+h5,
+h6 {
+	font-size: 1em;
+	/*16*/
+}
+h1 {
+	border-bottom: 1px solid;
+	margin-bottom: 1.875em;
+	padding-bottom: 0.8125em;
+}
+/* links */
+
+a {
+	text-decoration: none;
+	color: #065588;
+}
+a:hover,
+a:active {
+	text-decoration: underline;
+}
+/* block spacing */
+
+p,
+blockquote,
+.md-fences {
+	margin-bottom: 1.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 1.5em;
+}
+/* blockquote */
+
+blockquote {
+	font-style: italic;
+	border-left: 5px solid;
+	margin-left: 2em;
+	padding-left: 1em;
+}
+/* lists */
+
+ul,
+ol {
+	margin: 0 0 1.5em 1.5em;
+}
+/* tables */
+.md-meta,.md-before, .md-after {
+	color:#999;
+}
+
+table {
+	margin-bottom: 1.5em;
+	/*24 / 16*/
+	font-size: 1em;
+	/* width: 100%; */
+}
+thead th,
+tfoot th {
+	padding: .25em .25em .25em .4em;
+	text-transform: uppercase;
+}
+th {
+	text-align: left;
+}
+td {
+	vertical-align: top;
+	padding: .25em .25em .25em .4em;
+}
+
+code,
+.md-fences {
+	background-color: #dadada;
+}
+
+code {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.md-fences {
+	margin-left: 2em;
+	margin-bottom: 3em;
+	padding-left: 1ch;
+	padding-right: 1ch;
+}
+
+pre,
+code,
+tt {
+	font-size: .875em;
+	line-height: 1.714285em;
+}
+/* some fixes */
+
+h1 {
+	line-height: 1.3em;
+	font-weight: normal;
+	margin-bottom: 0.5em;
+}
+
+p + ul,
+p + ol{
+	margin-top: .5em;
+}
+
+h3 + ul,
+h4 + ul,
+h5 + ul,
+h6 + ul,
+h3 + ol,
+h4 + ol,
+h5 + ol,
+h6 + ol {
+	margin-top: .5em;
+}
+
+li > ul,
+li > ol {
+	margin-top: inherit;
+	margin-bottom: 0;
+}
+
+li ol>li {
+	list-style-type: lower-alpha;
+}
+
+li li ol>li{
+	list-style-type: lower-roman;
+}
+
+h2,
+h3 {
+	margin-bottom: .75em;
+}
+hr {
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid;
+	border-left: none;
+}
+h1 {
+	border-color: #c5c5c5;
+}
+blockquote {
+	border-color: #bababa;
+	color: #656565;
+}
+
+blockquote ul,
+blockquote ol {
+	margin-left:0;
+}
+
+.ty-table-edit {
+	background-color: transparent;
+}
+thead {
+	background-color: #dadada;
+}
+tr:nth-child(even) {
+	background: #e8e7e7;
+}
+hr {
+	border-color: #c5c5c5;
+}
+.task-list{
+	padding-left: 1rem;
+}
+
+.md-task-list-item {
+	padding-left: 1.5rem;
+	list-style-type: none;
+}
+
+.md-task-list-item > input:before {
+	content: '\221A';
+	display: inline-block;
+	width: 1.25rem;
+  	height: 1.6rem;
+	vertical-align: middle;
+	text-align: center;
+	color: #ddd;
+	background-color: #F3F2EE;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	color: inherit;
+}
+
+#write pre.md-meta-block {
+	min-height: 1.875rem;
+	color: #555;
+	border: 0px;
+	background: transparent;
+	margin-top: -4px;
+	margin-left: 1em;
+	margin-top: 1em;
+}
+
+.md-image>.md-meta {
+	color: #9B5146;
+}
+
+.md-image>.md-meta{
+	font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', serif;
+}
+
+
+#write>h3.md-focus:before{
+	left: -1.5rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h4.md-focus:before{
+	left: -1.5rem;
+	top: .25rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h5.md-focus:before{
+	left: -1.5rem;
+	top: .0.3125rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h6.md-focus:before{
+	left: -1.5rem;
+	top: 0.3125rem;
+	color:#999;
+	border-color:#999;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+.md-toc-content:empty:before{
+	color: #065588;
+}
+.md-toc-item {
+	color: #065588;
+}
+#write div.md-toc-tooltip {
+	background-color: #f3f2ee;
+}
+
+#typora-sidebar {
+	background-color: #f3f2ee;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
+  	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
+}
+
+.pin-outline #typora-sidebar {
+	background: inherit;
+	box-shadow: none;
+	border-right: 1px dashed;
+}
+
+.pin-outline #typora-sidebar:hover .outline-title-wrapper {
+	border-left:1px dashed;
+}
+
+.outline-item:hover {
+  background-color: #dadada;
+  border-left: 28px solid #dadada;
+  border-right: 18px solid #dadada;
+}
+
+.typora-node .outline-item:hover {
+  	border-right: 28px solid #dadada;
+}
+
+.outline-expander:before {
+  content: "\f0da";
+  font-family: FontAwesome;
+  font-size:14px;
+  top: 1px;
+}
+
+.outline-expander:hover:before,
+.outline-item-open>.outline-item>.outline-expander:before {
+  content: "\f0d7";
+}
+
+.modal-content {
+	background-color: #f3f2ee;
+}
+
+.auto-suggest-container ul li {
+	list-style-type: none;
+}
+
+/** UI for electron */
+
+.megamenu-menu,
+#top-titlebar, #top-titlebar *,
+.megamenu-content {
+	background: #f3f2ee;
+	color: #1f0909;
+}
+
+.megamenu-menu-header {
+	border-bottom: 1px dashed #202B33;
+}
+
+.megamenu-menu {
+	box-shadow: none;
+	border-right: 1px dashed;
+}
+
+header, .context-menu, .megamenu-content, footer {
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+    color: #1f0909;
+}
+
+#megamenu-back-btn {
+	color: #1f0909;
+	border-color: #1f0909;
+}
+
+.megamenu-menu-header #megamenu-menu-header-title:before {
+	color: #1f0909;
+}
+
+.megamenu-menu-list li a:hover, .megamenu-menu-list li a.active {
+	color: inherit;
+	background-color: #e8e7df;
+}
+
+.long-btn:hover {
+	background-color: #e8e7df;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+	background-color: #D2D1D1;
+}
+
+.btn-default {
+	background-color: transparent;
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+.ty-show-word-count #footer-word-count {
+	background: #c7c5c5;
+}
+
+#typora-quick-open {
+    background-color: inherit;
+}
+
+.md-diagram-panel {
+	margin-top: 8px;
+}
+
+.file-list-item-file-name {
+	font-weight: initial;
+}
+
+.file-list-item-summary {
+	opacity: 1;
+}
+
+.file-list-item {
+	color: #777;
+}
+
+.file-list-item.active {
+	background-color: inherit;
+	color: black;
+}
+
+.ty-side-sort-btn.active {
+	background-color: inherit;
+}
+
+.file-list-item.active .file-list-item-file-name  {
+	font-weight: bold;
+}
+
+.file-list-item{
+    opacity:1 !important;
+}
+
+.file-library-node.active>.file-node-background{
+	background-color: rgba(32, 43, 51, 0.63);
+	background-color: var(--active-file-bg-color);
+}
+
+.file-tree-node.active>.file-node-content{
+	color: white;
+	color: var(--active-file-text-color);
+}
+
+.md-task-list-item>input {
+	margin-left: -1.7em;
+	margin-top: calc(1rem - 12px);
+	-webkit-appearance: button;
+}
+
+input {
+	border: 1px solid #aaa;
+}
+
+.megamenu-menu-header #megamenu-menu-header-title,
+.megamenu-menu-header:hover, 
+.megamenu-menu-header:focus {
+	color: inherit;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+	opacity: 1;
+}
+
+/* https://github.com/typora/typora-issues/issues/2046 */
+.os-windows-7 strong,
+.os-windows-7 strong  {
+	font-weight: 760;
+}
+
+.ty-preferences .btn-default {
+	background: transparent;
+}
+
+.ty-preferences .window-header {
+	border-bottom: 1px dashed #202B33;
+	box-shadow: none;
+}
+
+#sidebar-loading-template, #sidebar-loading-template.file-list-item {
+	color: #777;
+}
+
+.searchpanel-search-option-btn.active {
+	background: #777;
+	color: white;
+}
+
+.export-detail, .light .export-detail, 
+.light .export-item.active, 
+.light .export-items-list-control {
+	background: #e0e0e0;
+	border-radius: 2px;
+	font-weight: 700;
+	color: inherit
+}
+
+
+</style><title>南湖</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h2 id='纪念馆简介'><span>纪念馆简介</span></h2><p><span>嘉兴南湖是中国共产党诞生地、中国革命红船起航地。</span></p><p><span>南湖革命纪念馆成立于1959年10月，馆址设在南湖湖心岛。1985年，邓小平同志为南湖革命纪念馆题写馆名。</span></p><p><span>2006年6月28日，在庆祝中国共产党成立85周年之际，时任浙江省委书记习近平为南湖革命纪念馆新馆奠基；2011年6月30日，中国共产党成立90周年前夕，南湖革命纪念馆新馆落成开放。2018年4月成立红船精神研究院，实行“馆院一体”管理。</span></p><p><span>南湖革命纪念馆基本陈列《红船起航》主题展览以中国革命红船起航为主题。基本陈列由“救亡图存”“开天辟地”“光辉历程”“走向复兴”等4个部分、21个单元组成，并设“中共一大代表人生轨迹”“中国共产党党章发展历程”两个专题。展陈面积共5600平方米，展线全长921米，设置文物资料1134件、场景（壁式）26处、雕塑6组、绘画作品8幅、多媒体（音视频）41个、图表（地图）41张、图片676张。</span></p><p><img src="https://gh.ykwang.top/picx/southlake/旧馆.png" referrerpolicy="no-referrer" alt="旧馆"></p><p><img src="https://gh.ykwang.top/picx/southlake/新馆.png" referrerpolicy="no-referrer" alt="新馆"></p><h2 id='参观内容'><span>参观内容</span></h2><p><span>展陈共有3个楼层，一楼和二楼为“开天辟地”单元，包括“探索救亡图存的道路”、“中国共产党成立”和“十三位代表生平事迹介绍”三个部分；三楼则为“光辉历程”单元，包括了“进行新民主主义革命”、“建设社会主义新中国”、“走中国特色社会主义道路”三个部分。</span></p><p><span>在这里，我看到中华民族遭受的深重苦难：无数不平等条约为睡狮戴上沉重的枷锁，西方列强张牙舞爪势要瓜分山河。在这里，我看到了中华民族救亡图存的历史：文人志士于笔尖发出的呐喊，千万民众投入救国的道路——其中就有那么一批人，他们选择了马克思主义，突破了重重阻挠建立了中国共产党，才有了今天我们看到的新中国。那些杰出的代表人物从人民中来，到人民中去，带领人民走向新中国，新世界。</span></p><h2 id='感悟和思考'><span>感悟和思考</span></h2><h3 id='对红船精神的学习'><span>对红船精神的学习</span></h3><p><span>2005年6月，习近平同志首次概括了红船精神的深刻内涵和历史地位，指出：“开天辟地、敢为人先的首创精神，坚定理想、百折不挠的奋斗精神，立党为公、忠诚为民的奉献精神，是中国革命精神之源，也是红船精神的深刻内涵。”</span></p><h4 id='开天辟地敢为人先的首创精神'><span>开天辟地、敢为人先的首创精神</span></h4><p><span>在参观中我们体悟到了中国共产党创始人的建党实践与革命活动的伟大意义。近代中国社会从1840年鸦片战争后，逐步沦为半殖民地半封建社会，救亡图存成为中国的时代课题。以李大钊、陈独秀、陈望道等为代表的中国先进知识分子怀着救国救民的远大志向，奋力播撒中国革命的思想火种，成为中国革命发展的思想先锋。他们创办进步刊物，宣传新思想和十月革命；翻译出版《共产党宣言》，宣传马克思主义理论；成立学术团体，学习和传播马克思主义。在他们的教育和影响下，很多青年接受了马克思主义，走上了坚决的革命道路，促进了马克思主义在中国更大范围的传播。同时，他们积极创建党团组织，开创中国工人阶级先锋组织。1920年6月，陈独秀同李汉俊、俞秀松、施存统等人开会商议，决定成立党组织，还起草了党的纲领。11月，共产党早期组织拟定了《中国共产党宣言》，指出“共产主义者的目的是要按照共产主义者的理想，创造一个新的社会”。为此，要通过革命的阶级斗争，推翻资产阶级政权，建立无产阶级专政。从播撒中国革命的思想火种，到奠基中国工人阶级的先锋组织；从制定彻底反帝反封建的民主革命纲领，到开创中国革命的新局面，无不彰显了开天辟地、敢为人先的首创精神，这正是红船精神的核心，是党和人民事业发展的动力。</span></p><h4 id='坚定理想百折不挠的奋斗精神'><span>坚定理想、百折不挠的奋斗精神</span></h4><p><span>在中国共产党创建的过程中，中国先进分子从激进民主主义者逐步成长为共产主义者。他们在自己建立马克思主义信仰后，又通过成立马克思主义学说的研究组织，深入工农民众中宣传马克思主义，进而把坚定的信仰传递到社会基层，为中国共产党的创建及中国革命奠定了坚实的思想基础，营造了浓厚的理论氛围，培育了一大批革命人才；在上海召开的中国共产党成立大会因遭到租界巡捕袭扰而遇到挫折时，他们并没有退缩，而是坚定地转移到浙江嘉兴南湖，在红船上完成了大会的最后议程，宣告了中国共产党的诞生；在中国共产党领导全国人民进行新民主主义革命、社会主义建设和改革的奋斗历程中，无论遇到多大的困难，用生命和鲜血谱写出一曲曲坚定理想、百折不挠的壮丽乐章。这种坚定理想、百折不挠的奋斗精神是红船精神的支柱，是胜利之本。</span></p><h4 id='立党为公忠诚为民的奉献精神是红船精神的本质'><span>立党为公、忠诚为民的奉献精神是红船精神的本质</span></h4><p><span>近代以来，为了民族独立和人民解放，中国社会各种政治力量先后尝试过诸多救国救民的方案，做过诸多努力，但都失败了。这时，中国迫切需要朝气蓬勃的新生力量，期待着先进阶级和先进政党的出现，充当中国革命的领导者，领导人民完成救国救民的历史重任。应运而生的中国共产党就是代表最广大人民利益的。党的一大通过的纲领就明确规定：确定党的名称是中国共产党；党的性质是无产阶级政党，要“以无产阶级革命军队推翻资产阶级的政权，消灭资本家私有制，由劳动阶级重建国家，承认无产阶级专政，直到阶级斗争结束，即直到消灭社会的阶级区分”“废除资本私有制，没收一切生产资料归社会所有”。这些规定表明了中国共产党要消灭剥削制度、实现共产主义的政治立场和奋斗目标，鲜明地表明了中国共产党是无产阶级性质的政党，划清了中国共产党同其他政党的界限。这种立党为公、忠诚为民的奉献精神是红船精神的本质，是德政之基。</span></p><h3 id='结合自身的思考'><span>结合自身的思考</span></h3><ul><li><span>全心全意为人民服务，立党为公、忠诚为民。</span></li></ul><p><span>红船精神强调全心全意为人民服务的奉献精神，这是共产党人的根本宗旨，是的最共产党人从始至终的理想信念。作为当代大学生，我们要牢记“人民利益高于一切”的原则，把人民的需求放在首位，为群众谋福祉。要积极参与志愿服务活动，关注社会弱势群体，关心他们的生活状况和发展需求；要关注环境保护问题，倡导绿色低碳的生活方式，减少环境污染和资源浪费；要关注贫困地区的发展情况，积极参与扶贫工作，帮助他们脱贫致富。</span></p><ul><li><span>敢于创新，开拓进取，思维开放，勇创佳绩。</span></li></ul><p><span>嘉兴南湖红船是中共一大顺利完会的地方，标志着中国共产党的诞生，给中国革命的带来了新力量、新道路。红船精神是早期共产党人开天辟地、敢为人先的首创精神的集中体现。单纯依靠廉价劳动力的时代已经过去，只有通过不断创新，不断探索，攻克技术难关，掌握核心科技，我国才能从大国向强国继续迈进。作为大学生，我们要不断培养创新意识、创新能力，在实践中发现问题和解决问题，推动社会的进步与发展。</span></p><ul><li><span>不怕牺牲、敢于斗争，百折不挠、永不言败。</span></li></ul><p><span>与会代表们在面对军警特勤的严密搜捕、冒着被捕入狱的困难和挑战时，没有退缩放弃，而是与敌对势力周旋，通过不断转移地点，隐秘伪装顺利完成会议。这种不怕牺牲、敢于斗争的精神，是共产党人的战斗品格，是共产党人走向胜利的动力源泉。作为当代大学生，我们要有强烈的使命感和责任感，勇于承担起时代赋予的重任。要敢于直面矛盾和冲突，不怕挫折和失败，坚持不懈地追求真理和正义。</span></p><ul><li><span>艰苦奋斗、勤俭节约，自强不息、自立自强。</span></li></ul><p><span>红船精神强调艰苦奋斗、勤俭节约的传统美德，这是共产党人的生活作风，是共产党人的精神财富。作为当代大学生，我们要继承和发扬艰苦朴素的优良传统，养成良好的生活习惯和消费观念。要珍惜粮食，杜绝浪费现象，节约用水用电，减少不必要的开支。要积极参加公益劳动，参与社区建设和环境保护，为社会做出应有的贡献。要努力学习，提高自身的知识水平和技能水平，成为能为国家和社会所用的人才。</span></p><ul><li><span>团结协作、互助友爱，和衷共济、共同发展。</span></li></ul><p><span>红船精神强调团结协作、互助友爱的团队精神，这是共产党人的组织原则，是共产党人取得成功的关键优势。作为当代大学生，我们要培养团队合作的能力，学会与他人沟通和协调，共同完成各项任务。要尊重他人的意见和建议，善于倾听和理解，形成和谐的人际关系。要积极参与集体活动，培养团队意识和集体荣誉感，共同实现目标。</span></p><p><span>红船精神是我们伟大的革命精神结晶，是中国人民对苦难抗争的精神之源，也是中华民族焕发新的生机与活力的初次成长。作为当代大学生，我们应该积极弘扬红船精神，为实现中华民族的伟大复兴而努力奋斗。只有坚定理想信念，服务人民，勇于探索，不怕牺牲，艰苦奋斗，团结协作，才能真正做到不忘初心，继续前进。让我们共同努力，为中国梦的实现贡献自己的智慧和力量。</span></p><h2 id='一些建议'><span>一些建议</span></h2><p><span>中国大学生群体是个性发展的一个群体，要想在大学生群体当中讲好红船故事，弘扬红船精神，首先就要尊重大学生的个体差异，因材施教，把握大学生心理和思维特点的共性，以合适的教育方式将红船精神的内核传递给大学生群体，教育方式可以分为理论教育和实践教育两个部分。</span></p><p><span>理论教育可以从组织红船系列讲座、开展红船精神相关课题活动等方面开展，给与学生们一定的自主性，让学生们自主探索红船精神的内核，在与其他人的交流中总结出具有个人特色的生活学习指南，将抽象的理论化为具体可操作的行为准则，让红船精神真正活过来。</span></p><p><span>实践教育应当重视学生们的参与度，具体形式可以有：</span></p><p><span>1.邀请革命前辈讲述革命故事，拉近前辈与大学生之间的物理距离和心理距离，让学生们明白革命年代离我们并不十分遥远。</span></p><p><span>2.学校组织排练、演出红船精神主题舞台剧，加入学生们喜爱的歌唱、舞蹈等元素，以学生们喜闻乐见的形式阐述红船精神的内核，把“红船精神”的价值内涵用质朴平实的语言讲清楚，使抽象的理论内化为大学生坚定的理想信念和行为准则。</span></p><p><span>3.将实践活动融入到公益活动和社会调研当中，让学生们开拓眼界，增强理论结合实际的能力，在为他人服务的成就感和满足感中提升精神境界和水平。</span></p></div></div>
+</body>
+</html>
