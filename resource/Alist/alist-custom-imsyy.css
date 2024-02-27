@@ -82,7 +82,7 @@ body #root .body.hope-stack .markdown-body blockquote > :last-child {
     font-size: 14px;
 }
 body #root .nav.hope-breadcrumb.hope-c-hrsMRY.hope-c-PJLV.hope-c-PJLV-idaeksS-css {
-    background-color: var(--custom-backgroundColor);
+    background-color: transparent;
 }
 body #root .obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css {
     background-color: var(--custom-backgroundColor);
